@@ -1,10 +1,24 @@
 #include<iostream>
-
+#include<map>
+#include<vector>
 using namespace std;
 
+
+
+class A
+{
+public:
+	int i;
+};
+A* f()
+{
+
+	A x;
+	return &x;
+}
 int main()
 {
-	cout << "My name is Ismet Mert Nardal" << endl;
-
-	return 0;
+	A* pA = f();
+	pA->i = 10;
+	cout << pA->i;
 }
